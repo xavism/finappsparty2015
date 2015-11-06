@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+@import "partials/base";
+@import "partials/main";
+@import "partials/mixins";
+
+/** BODY
+=========================================================================== */
+body {
+	font-family: $base-font-family;
+	background-color: $light-grey;
+}
+html,body,.left,.right,.wrapper{
+    height: 100%;
+    overflow: scroll;
+}
+.wrapper {
+	position: relative;
+}
+
+/** MENU
+=========================================================================== */
+.left {
+	width: 230px;
+    float: left;
+    position: relative;
+}
+
+.menu {
+	@include clearfix;
+	background-color: $asphalt;
+	width: 230px;
+	height: 100%;
+
+	a {
+		cursor: pointer;
+	}
+}
+
+.menu-title {
+	background-color: $midnight;
+	a {
+		padding-left: 15px;
+		color: $cloud;
+		font-size: 18px;
+		height: 60px;
+
+		&:hover {
+			color: #fff;
+		}
+
+		img {
+			height: 50px;
+			margin: 5px;
+			vertical-align: middle;
+		}
+
+	}
+}
+
+.menu-profile {
+	@include clearfix;
+	margin-top: 20px;
+
+	.menu-profile-pic {
+		width: 35%;
+		float: left;
+
+		img {
+			@include border-radius(50%);
+			width: 70%;
+    		background: #fff;
+    		margin-left: 15%;
+    		border: 2px solid $cloud;
+		}
+	}
+
+	.menu-profile-info {
+		width: 65%;
+		float: left;
+		padding-top: 5px;
+
+		span {
+			color: $silver;
+			font-size: 12px;
+		}
+
+		h2 {
+			color: $cloud;
+			font-size: 14px;
+			padding-top: 10px;
+		}
+	}
+}
+
+.menu-content {
+	margin-top: 20px;
+	border-top: 1px solid $silver;
+	position: relative;
+
+	ul {
+		> li {
+			> a {
+				@include transition(background 0.2s ease-in-out);
+				color: $cloud;
+				padding: 15px;
+				display: block;
+				font-size: 13px;
+				font-weight: $light;
+
+				&:hover,
+				&.active {
+					background-color: rgba($cloud, 0.2);
+				}
+				
+				i {
+					padding-right: 5px;
+				}
+				span {
+					float: right;
+				}
+			}
+		}
+	}
+
+	.menu-child-items {
+		display: none;
+		background-color: rgba($cloud, 0.1);
+	}
+}
+
+.menu-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	a {
+		background-color: $midnight;
+		color: $asbestos;
+		width: 25%;
+		font-size: 17px;
+		display: block;
+		float: left;
+		text-align: center;
+		padding: 7px;
+	}
+}
+
+/** CONTAINER
+=========================================================================== */
+.right {
+	margin-left: 230px;
+}
+
+/** HEADER
+=========================================================================== */
+.header {
+	width: 100%;
+	background-color: $picton;
+	color: #fff;
+	height: 60px;
+	line-height: 59px;
+
+	.header-toogle {
+		font-size: 25px;
+		padding-left: 15px;
+		display: inline-block;
+	}
+
+	.header-profile {
+		float: right;
+		display: inline-block;
+		margin-right: 25px;
+
+		a {
+			color: #fff;
+			&:hover { text-decoration: none;}
+		}
+
+		img {
+			@include border-radius(50%);
+			width: 40px;
+    		border: 1px solid $cloud;
+    		vertical-align: middle;
+    		margin: 10px;
+		}
+	}
+}
+
+/** CONTENT
+=========================================================================== */
+.content {
+	padding: 25px;
+}
+
+.content-title {
+	padding-bottom: 15px;
+
+	h1 {
+		font-size: 32px;
+		font-weight: $bold;
+		color: $hoki;
+	}
+}
+
+.content-panel {
+	background-color: #fff;
+	border: 1px solid $cloud;
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	.content-panel-header {
+		font-size: 18px;
+		color: $hoki-light;
+		padding-bottom: 15px;
+		border-bottom: 2px solid $cloud;
+	}
+	.content-panel-body {
+		font-size: 13px;
+		color: $hoki;
+
+		table {
+			margin: 0;
+			border-color: $cloud;
+			th,td {
+				border-color: $cloud;
+			}
+			th {
+				font-weight: $bold;
+			}
+		}
+	}
+
+	.content-panel-header + .content-panel-body {
+		padding-top: 15px;
+	}
+}
+
+.empty-panel {
+	@include border-radius(10px);
+	@include transition(background 0.2s ease-in-out);
+	background: transparent;
+	border: 1px solid $silver;
+	color: $silver;
+	font-size: 18px;
+	text-align: center;
+	font-weight: $light;
+	padding-bottom: 25px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $cloud;
+	}
+
+	i {
+		display: block;
+		margin: 25px 0 5px;
+		font-size: 22px;
+	}
+}
+
+table {
+	font-size: 13px;
+}
+
+/** BUTTONS
+=========================================================================== */
+.button {
+	@include transition(background 0.2s ease-in-out);
+	padding: 5px 8px;
+	height: 30px;
+	line-height: 20px;
+	text-decoration: none;
+	background-color: $hoki;
+	color: #fff;
+	border: 0;
+	font-size: 13px;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover,
+	&:active {
+		color: #fff;
+		background-color: $asphalt;
+	}
+	&:visited {
+		color: #fff;
+	}
+	& + & {
+		margin-left: 5px;
+	}
+}
+
+/** COLORS
+=========================================================================== */
+.color-green {
+	color: $emerald;
+}
+
+.color-red {
+	color: $sunset;
+}
+
+/** FORMS
+=========================================================================== */
+.form-group {
+	label {
+		font-size: 15px;
+    	font-weight: $bold;
+    	padding-bottom: 10px;
+	}
+}
+
+.form-control {
+	@include border-radius(0);
+	border: 1px solid $silver;
+	//-webkit-appearance: none;
+	color: $asbestos;
+
+	&:focus {
+		@include box-shadow(none); // Remove bootstrap glow
+	}
+}
+
+.wysiwyg {
+	overflow: scroll;
+	height: 150px;
+
+	b { font-weight: $bold; }
+	i { font-style: italic }
+}
+.wysiwyg-toolbar {
+	@include border-radius(3px);
+	background-color: $light-grey;
+	border: 1px solid $cloud;
+	margin-bottom: 5px;
+
+	a {
+		@include border-radius(3px);
+		color: $asbestos;
+		padding: 10px 13px;
+		display: inline-block;
+
+		&:hover {
+			color: $asphalt;
+		}
+
+		&.wysiwyg-active {
+			background-color: $silver;
+			color: $asphalt;
+		}
+	}
+
+	.dropdown {
+		display: inline-block;
+	}
+
+	.wysiwyg-link {
+		padding: 5px;
+		width: 220px;
+		input {
+			width: 140px;
+			display: inline-block;
+			position: relative;
+		}
+		button {
+			width: 60px;
+			display: inline-block;
+			position: relative;
+			padding: 5px 0;
+			color: $asbestos;
+		}
+	}
+}
+
+label.checkbox {
+	margin-left: 20px;
+	display: inline-block;
+
+	> input{
+		visibility: hidden;
+
+		&:before {
+			@include transition(color 0.2s ease-in-out);
+			position: absolute;
+			top: -50%;
+			left: 0;
+			font-family: FontAwesome;
+		    content:"\f14a";
+		    color: $silver;
+		    font-size: 20px;
+		    visibility: visible;  
+		}
+		&:checked {
+			&:before { color: $hoki; }
+			& + span { color: $hoki; }
+		}
+
+		& + span {
+			@include transition(color 0.2s ease-in-out);
+			padding-left: 5px;
+			color: $silver;
+		}
+	}
+
+	& + & {
+		margin-left: 35px;
+	}
+}
+
+/** FOOTER
+=========================================================================== */
+.footer {
+	background-color: #fff;
+	text-align: right;
+	font-size: 10px;
+	padding: 15px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid $cloud;
+
+	img {
+		padding-left: 5px;
+	}
+}

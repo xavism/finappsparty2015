@@ -1,4 +1,3 @@
 <div class="footer">
-    Powered by
-    <img src="img/logo-edriaax.png">
+    Made with love by Fiberburgers.
 </div>

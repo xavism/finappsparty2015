@@ -2,8 +2,7 @@
     <div id="menu" class="menu">
         <div class="menu-title">
             <a href="<?php echo SITE_ROOT; ?>">
-                <img src="<?php echo SITE_ROOT; ?>/public/img/logo-fibprensa2.png">
-                <!--span>Campañas</span-->
+                <span>FinApps</span>
             </a>
         </div>
 
@@ -34,21 +33,5 @@
                 </ul>
             </div>
         </div>
-
-        <!--div class="menu-footer">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-        </div-->
-
     </div>
 </div>
