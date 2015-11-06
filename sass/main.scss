@@ -3,7 +3,6 @@
 @import "partials/base";
 @import "partials/main";
 @import "partials/mixins";
-
 /** BODY
 =========================================================================== */
 body {
@@ -95,7 +94,6 @@ html,body,.left,.right,.wrapper{
 
 .menu-content {
 	margin-top: 20px;
-	border-top: 1px solid $silver;
 	position: relative;
 
 	ul {
@@ -156,7 +154,7 @@ html,body,.left,.right,.wrapper{
 =========================================================================== */
 .header {
 	width: 100%;
-	background-color: $picton;
+	background-color: $steel-blue;
 	color: #fff;
 	height: 60px;
 	line-height: 59px;
@@ -209,6 +207,7 @@ html,body,.left,.right,.wrapper{
 	padding: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+    @include box-shadow(2px 7px 18px -11px rgba(56,49,56,0.69));
 
 	.content-panel-header {
 		font-size: 18px;
@@ -221,13 +220,16 @@ html,body,.left,.right,.wrapper{
 		color: $hoki;
 
 		table {
+
 			margin: 0;
 			border-color: $cloud;
 			th,td {
 				border-color: $cloud;
+                text-align: center;
 			}
 			th {
 				font-weight: $bold;
+                text-align: center;
 			}
 		}
 	}
