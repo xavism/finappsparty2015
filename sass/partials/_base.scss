@@ -1,0 +1,23 @@
+@import "compass";
+@import "compass/reset";
+
+/** BORDER BOX
+=========================================================================== */
+*, *:before, *:after {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+/** NEAT LINKS
+=========================================================================== */
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:active,
+	&:visited,
+	&:focus {
+		text-decoration: none;
+	}
+}

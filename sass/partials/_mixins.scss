@@ -1,0 +1,82 @@
+// -- Menu list (ul)
+// Inline-block list with no spaces between elements
+@mixin menu-list($padding) {
+	list-style: none;
+	font-size: 0;
+	> li {
+		display: inline-block;
+		padding: $padding;
+		font-size: $base-font-size;
+	}
+}
+
+// --Menu list dropdown (li)
+// Makes the child ul to be a dropdown
+@mixin menu-list-dropdown($padding) {
+	position: relative;
+	&:hover {
+		> ul {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	> ul {
+		position: absolute;
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+		top: 100%;
+		left: 0;
+		z-index: 2;
+		> li {
+			display: block;
+			padding: $padding;
+		}
+	}
+}
+
+// Underlines a block element with transition
+@mixin underline-from-left($duration, $color) {
+	position: relative;
+	overflow: hidden;
+	&:before {
+		content: "";
+		width: 0;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background: $color;
+		height: 4px;
+		@include transition-property("width");
+		@include transition-duration($duration);
+		@include transition-timing-function(ease-in-out);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+// List of pages
+@mixin pagination($size, $font-size, $margin) {
+	display: block;
+	text-align: center;
+	list-style: none;
+	font-size: 0;
+
+	li {
+		display: inline-block; 
+		width: $size;
+		height: $size;
+		padding-top: ($size - $font-size)/2;
+		margin: 3px;
+		cursor: pointer;
+		font-size: $font-size;
+	}
+}
