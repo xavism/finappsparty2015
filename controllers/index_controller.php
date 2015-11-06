@@ -17,13 +17,14 @@ class Index_Controller extends Controller {
 
 		$content = new View();
 		$content->Assign('content-title', 'Bienvenido!');
-		$this->Assign('content', $content->Render('editor', false));
+		$this->Assign('content', $content->Render('content', false));
 
 		$footer = new View();
 		$this->Assign('footer', $footer->Render('footer', false));
 
 		$this->Load_View('index');
 		$this->view->Set_Site_Title('FinApps');
+		
 	}
 
 }
