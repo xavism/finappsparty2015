@@ -8,6 +8,7 @@ class Model{
 
     }
 
+
     protected function find($type = 'first', $params = array(), $joins = array()) {
 		// Make a connection
 		$mysql = mysqli_connect( MYSQL_SERVER, MYSQL_USER, MYSQL_PASSWORD) or die("Error de conexión a la bbdd");
