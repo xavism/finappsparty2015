@@ -2,6 +2,7 @@
     <div id="menu" class="menu">
         <div class="menu-title">
             <a href="<?php echo SITE_ROOT; ?>">
+                <img src="<?php echo SITE_ROOT; ?>/public/img/logo.svg" alt="">
                 <span>FinApps</span>
             </a>
         </div>

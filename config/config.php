@@ -7,7 +7,7 @@ define ('DEVELOPMENT_ENVIRONMENT',true);
 /** Site Root **/
 // Domain name of the site (no slash at the end!)
 //define('SITE_ROOT' , 'http://You domain name');
-define('SITE_ROOT' , 'http://localhost:8888');
+define('SITE_ROOT' , 'http://localhost:8888/finappsparty2015');
 
 
 define ('DEFAULT_CONTROLLER', "index");
