@@ -1,8 +1,8 @@
 /**
  * Created by xavisanchezmir on 7/11/15.
  */
-$(document).ready(function(){
-    var temperatura_cuina = parseInt(all_data_temperatura[0].valor);
+
+function print_temp_cocina(temperatura_cuina){
     var color_result;
     if (temperatura_cuina < 12) color_result = "#4B77BE";
     else if (temperatura_cuina > 42) color_result = "#FF5A5E";
@@ -31,8 +31,28 @@ $(document).ready(function(){
     if(temperatura_cuina > 60) temperatura_cuina = 60;
     else if(temperatura_cuina < 0) temperatura_cuina = 0;
     gauge.set(temperatura_cuina);
+};
 
 
+function update_temp() {
+    $.ajax({
+        type: "POST",
+        url: "http://46.101.139.161/bdapi/get-temp.php",
+        data: {},
+        success: function(data, textStatus, jqXHR) {
+            print_temp_cocina(parseInt(data));
+        }
+    });
+    return false;
+};
+
+
+$(document).ready(function(){
+    var temperatura_cuina = parseInt(all_data_temperatura[0].valor);
+    print_temp_cocina(temperatura_cuina);
+    setInterval(function() {
+        update_temp();
+    }, 10000);
     var humitat_cuina = parseInt(all_data_humitat[0].valor);
     var color_result_cuina;
     if (humitat_cuina < 80) color_result_cuina = "#4B77BE";
