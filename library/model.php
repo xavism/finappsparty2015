@@ -99,7 +99,7 @@ class Model{
     	if ($type == 'first') {
     		$query .= " LIMIT 1";
     	}
-
+        die($query);
     	$elems = array();
     	$result = $mysql->query($query);
     	if ($result) {
