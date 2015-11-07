@@ -6,7 +6,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
  
 # Rewrite all other URLs to index.php/URL
-RewriteRule ^(.*)$ /fib/index.php?url=$1 [L,PT]
+RewriteRule ^(.*)$ /finappsparty2015/index.php?url=$1 [L,PT]
 
 
 

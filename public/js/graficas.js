@@ -46,14 +46,8 @@ function update_temp() {
     return false;
 };
 
+function print_hum_cocina(humitat_cuina){
 
-$(document).ready(function(){
-    var temperatura_cuina = parseInt(all_data_temperatura[0].valor);
-    print_temp_cocina(temperatura_cuina);
-    setInterval(function() {
-        update_temp();
-    }, 10000);
-    var humitat_cuina = parseInt(all_data_humitat[0].valor);
     var color_result_cuina;
     if (humitat_cuina < 80) color_result_cuina = "#4B77BE";
     else color_result_cuina = "#FF5A5E";
@@ -78,6 +72,30 @@ $(document).ready(function(){
     gauge.maxValue = 100; // set max gauge value
     gauge.animationSpeed = 32; // set animation speed (32 is default value)
     gauge.set(humitat_cuina);
+}
+
+function update_hum() {
+    $.ajax({
+        type: "POST",
+        url: "http://46.101.139.161/bdapi/get-hum.php",
+        data: {},
+        success: function(data, textStatus, jqXHR) {
+            print_hum_cocina(parseInt(data));
+        }
+    });
+    return false;
+};
+
+$(document).ready(function(){
+    var temperatura_cuina = parseInt(all_data_temperatura[0].valor);
+    print_temp_cocina(temperatura_cuina);
+    var humitat_cuina = parseInt(all_data_humitat[0].valor);
+    print_hum_cocina(humitat_cuina);
+    setInterval(function() {
+        update_temp();
+        update_hum();
+    }, 10000);
+
 
 
 
@@ -122,7 +140,7 @@ $(document).ready(function(){
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [21, 23, 24, 22, 19]
+                data: [parseInt(all_data_temperatura[4].valor), parseInt(all_data_temperatura[3].valor), parseInt(all_data_temperatura[2].valor), parseInt(all_data_temperatura[1].valor), parseInt(all_data_temperatura[0].valor)]
             }
         ]
     };
@@ -140,7 +158,7 @@ $(document).ready(function(){
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [21, 23, 24, 22, 19]
+                data: [parseInt(all_data_humitat[4].valor), parseInt(all_data_humitat[3].valor), parseInt(all_data_humitat[2].valor), parseInt(all_data_humitat[1].valor), parseInt(all_data_humitat[0].valor)]
             }
         ]
     };
@@ -148,7 +166,12 @@ $(document).ready(function(){
 
 
 
+    $('#cocina_up').on('click', changeClass);
+    function changeClass() {
 
-
+        $('#cocina_up').toggleClass('col-md-6 col-md-12');
+        $('#grafic_temp_cuina').toggleClass('no-display display');
+        $('#grafic_hum_cuina').toggleClass('no-display display');
+    }
 
 });

@@ -202,12 +202,14 @@ html,body,.left,.right,.wrapper{
 }
 
 .content-panel {
+    @include box-shadow(2px 7px 18px -11px rgba(56,49,56,0.69));
+    @include transition(width 0.2s ease-in-out);
 	background-color: #fff;
 	border: 1px solid $cloud;
 	padding: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-    @include box-shadow(2px 7px 18px -11px rgba(56,49,56,0.69));
+
 
 	.content-panel-header {
 		font-size: 18px;
@@ -271,11 +273,15 @@ table {
 }
 
 .no-display {
-  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .display {
-  display: inline;
+  visibility: visible;
+  position: static;
 }
 
 .text-right {

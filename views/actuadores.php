@@ -3,16 +3,16 @@
     var all_data_humitat = <?php echo json_encode($data['registres_humitat']);?>;
 </script>
 <div class="content">
-	<!--<div class="content-title">
+    <!--<div class="content-title">
 		<h1><?php echo $data['content-title']; ?></h1>
 	</div>-->
-	<div class="row">
-		<div id="cocina_up" class="col-xs-12 col-sm-12 col-md-6">
-			<div id="cocina" class="content-panel">
-				<div class="content-panel-header">
-                    <i class="icon-food"></i> Cocina <span><i class="icon-ok text-right ok"></i></span>
-				</div>
-				<div class="content-panel-body">
+    <div class="row">
+        <div id="cocina_up" class="col-xs-12 col-sm-12 col-md-6">
+            <div id="cocina" class="content-panel">
+                <div class="content-panel-header">
+                    <i class="fa fa-bed"></i> Dormitorio <span><i class="icon-ok text-right ok"></i></span>
+                </div>
+                <div class="content-panel-body">
                     <div class="row">
                         <div class="col-sm-12 col-sm-6 col-md-6">
                             <div class="row">
@@ -50,10 +50,10 @@
                             </div>
                         </div>
                     </div>
-			    </div>
-		    </div>
+                </div>
+            </div>
 
-	    </div>
+        </div>
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="content-panel">
                 <div class="content-panel-header">
@@ -93,8 +93,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
     </div>
-
-
-</div>
 
