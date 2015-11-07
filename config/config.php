@@ -16,6 +16,6 @@ define ('DEFAULT_ACTION', "index");
 /** MYSQL Options **/
 define ('MYSQL_SERVER', 'localhost');
 define ('MYSQL_USER', 'root');
-define ('MYSQL_PASSWORD', 'root');
+define ('MYSQL_PASSWORD', 'ptiproject');
 define ('MYSQL_DB', 'finapps2015');
 
