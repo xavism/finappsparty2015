@@ -2,7 +2,7 @@
  * Created by xavisanchezmir on 7/11/15.
  */
 $(document).ready(function(){
-    var temperatura_cuina = parseInt(all_data[0].valor);
+    var temperatura_cuina = parseInt(all_data_temperatura[0].valor);
     var color_result;
     if (temperatura_cuina < 12) color_result = "#4B77BE";
     else if (temperatura_cuina > 42) color_result = "#FF5A5E";
@@ -33,7 +33,7 @@ $(document).ready(function(){
     gauge.set(temperatura_cuina);
 
 
-    var humitat_cuina = 90;
+    var humitat_cuina = parseInt(all_data_humitat[0].valor);
     var color_result_cuina;
     if (humitat_cuina < 80) color_result_cuina = "#4B77BE";
     else color_result_cuina = "#FF5A5E";

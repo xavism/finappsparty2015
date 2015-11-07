@@ -18,6 +18,8 @@ class Index_Controller extends Controller {
 		$content = new View();
         $registres = new Registres_Model();
         $content->Assign('registres',$registres->getRegistreById(1));
+        $content->Assign('registres_humitat',$registres->getRegistreById(2));
+
 		$content->Assign('content-title', 'Bienvenido!');
 		$this->Assign('content', $content->Render('content', false));
 

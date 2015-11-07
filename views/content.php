@@ -1,5 +1,6 @@
 <script>
-    var all_data = <?php echo json_encode($data['registres']);?>;
+    var all_data_temperatura = <?php echo json_encode($data['registres']);?>;
+    var all_data_humitat = <?php echo json_encode($data['registres_humitat']);?>;
 </script>
 <div class="content">
 	<!--<div class="content-title">
@@ -49,7 +50,8 @@
                                     <canvas id="cocina_hum" height="100" width="200">
                                 </div>
                                 <div class="col-sm-12">
-                                    90%
+                                    <?php echo intval($data['registres_humitat'][0]['valor']);?>
+                                    %
                                 </div>
                                 <div class="col-sm-12 no-display" id="grafic_hum_cuina_cont">
                                     <canvas id="grafic_hum_cuina" width="450" height="200"></canvas>
