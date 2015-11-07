@@ -31,16 +31,18 @@ function print_temp_cocina(temperatura_cuina){
     if(temperatura_cuina > 60) temperatura_cuina = 60;
     else if(temperatura_cuina < 0) temperatura_cuina = 0;
     gauge.set(temperatura_cuina);
+    return gauge;
 };
 
 
-function update_temp() {
+function update_temp(gauge) {
     $.ajax({
         type: "POST",
         url: "http://46.101.139.161/bdapi/get-temp.php",
         data: {},
         success: function(data, textStatus, jqXHR) {
-            print_temp_cocina(parseInt(data));
+            //print_temp_cocina(parseInt(data));
+            gauge.set(parseInt(data));
         }
     });
     return false;
@@ -88,11 +90,11 @@ function update_hum() {
 
 $(document).ready(function(){
     var temperatura_cuina = parseInt(all_data_temperatura[0].valor);
-    print_temp_cocina(temperatura_cuina);
+    var gauge = print_temp_cocina(temperatura_cuina);
     var humitat_cuina = parseInt(all_data_humitat[0].valor);
     print_hum_cocina(humitat_cuina);
     setInterval(function() {
-        update_temp();
+        update_temp(gauge);
         update_hum();
     }, 10000);
 
