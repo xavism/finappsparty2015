@@ -2,7 +2,7 @@
  * Created by xavisanchezmir on 7/11/15.
  */
 $(document).ready(function(){
-    var temperatura_cuina = 25;
+    var temperatura_cuina = parseInt(all_data[0].valor);
     var color_result;
     if (temperatura_cuina < 12) color_result = "#4B77BE";
     else if (temperatura_cuina > 42) color_result = "#FF5A5E";
@@ -17,7 +17,7 @@ $(document).ready(function(){
             strokeWidth: 0.025, // The rotation offset
             color: '#BDC3C7' // Fill color
         },
-        limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
+        limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
         colorStart: color_result,   // Colors
         colorStop: color_result,    // just experiment with them
         strokeColor: '#E0E0E0',   // to see which ones work best for you
@@ -28,6 +28,8 @@ $(document).ready(function(){
     var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
     gauge.maxValue = 60; // set max gauge value
     gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    if(temperatura_cuina > 60) temperatura_cuina = 60;
+    else if(temperatura_cuina < 0) temperatura_cuina = 0;
     gauge.set(temperatura_cuina);
 
 

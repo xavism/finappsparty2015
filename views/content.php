@@ -1,3 +1,6 @@
+<script>
+    var all_data = <?php echo json_encode($data['registres']);?>;
+</script>
 <div class="content">
 	<!--<div class="content-title">
 		<h1><?php echo $data['content-title']; ?></h1>
@@ -28,7 +31,7 @@
                                     <canvas id="cocina_temp" height="100" width="200">
                                 </div>
                                 <div class="col-sm-12">
-                                    <?php echo $data['registres'][0]['valor'];?>
+                                    <?php echo intval($data['registres'][0]['valor']);?>
                                     ºC
                                 </div>
                                 <div class="col-sm-12 no-display" id="grafic_temp_cuina_cont">
@@ -101,3 +104,4 @@
 
 
 </div>
+
