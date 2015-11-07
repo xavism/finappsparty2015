@@ -2,7 +2,7 @@
  * Created by xavisanchezmir on 7/11/15.
  */
 $(document).ready(function(){
-    var temperatura_cuina = 11;
+    var temperatura_cuina = 25;
     var color_result;
     if (temperatura_cuina < 12) color_result = "#4B77BE";
     else if (temperatura_cuina > 42) color_result = "#FF5A5E";

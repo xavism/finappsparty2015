@@ -43,5 +43,9 @@
 	</div>
 
 </body>
+
+<script>
+    var temperatura_cuina = <?php echo json_encode($data['registres']);?>;
+</script>
 <script src="<?php echo SITE_ROOT; ?>/public/js/graficas.js"></script>
 </html>
