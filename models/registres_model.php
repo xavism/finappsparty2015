@@ -7,7 +7,7 @@
  */
 class Registres_Model extends Model {
 
-    function __contstruct () {
+    function __construct () {
         parent::__construct();
         $this->table = "registres";
     }
