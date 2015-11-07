@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f00fd4ca-c854-454d-80f5-2d35114c916d" name="Default" comment="Adding Ajax">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/graficas.js" afterPath="$PROJECT_DIR$/public/js/graficas.js" />
+    <list default="true" id="f00fd4ca-c854-454d-80f5-2d35114c916d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="finappsparty2015.iws" />
@@ -664,7 +662,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446900998379</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Final commit API and Python">
+      <created>1446908197395</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1446908197395</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -733,7 +737,8 @@
     <MESSAGE value="First steps" />
     <MESSAGE value="Adding Charts" />
     <MESSAGE value="Adding Ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Ajax" />
+    <MESSAGE value="Final commit API and Python" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final commit API and Python" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
