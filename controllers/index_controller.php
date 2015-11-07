@@ -16,6 +16,8 @@ class Index_Controller extends Controller {
 		$this->Assign('menu', $menu->Render('menu', false));
 
 		$content = new View();
+        $registres = new Registres_Model();
+        $content->Assign('registres',$registres->getRegistreById(1));
 		$content->Assign('content-title', 'Bienvenido!');
 		$this->Assign('content', $content->Render('content', false));
 

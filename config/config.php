@@ -14,7 +14,8 @@ define ('DEFAULT_CONTROLLER', "index");
 define ('DEFAULT_ACTION', "index");
 
 /** MYSQL Options **/
-define ('MYSQL_SERVER', 'localhost');
-define ('MYSQL_USER', 'pi');
-define ('MYSQL_PASSWORD', 'fiber4fiber');
-define ('MYSQL_DB', 'finapps');
+define ('MYSQL_SERVER', '127.0.0.1');
+define ('MYSQL_USER', 'root');
+define ('MYSQL_PASSWORD', 'ptiproject');
+define ('MYSQL_DB', 'finapps2015');
+

@@ -28,7 +28,8 @@
                                     <canvas id="cocina_temp" height="100" width="200">
                                 </div>
                                 <div class="col-sm-12">
-                                    11ºC
+                                    <?php echo $data['registres'][0]['valor'];?>
+                                    ºC
                                 </div>
                                 <div class="col-sm-12 no-display" id="grafic_temp_cuina_cont">
                                     <canvas id="grafic_temp_cuina" width="450" height="200"></canvas>
