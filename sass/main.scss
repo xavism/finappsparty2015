@@ -218,6 +218,7 @@ html,body,.left,.right,.wrapper{
 	.content-panel-body {
 		font-size: 13px;
 		color: $hoki;
+        text-align: center;
 
 		table {
 
@@ -267,6 +268,22 @@ html,body,.left,.right,.wrapper{
 
 table {
 	font-size: 13px;
+}
+
+.no-display {
+  display: none;
+}
+
+.display {
+  display: inline;
+}
+
+.text-right {
+  float: right;
+}
+
+.ok {
+  color: $emerald;
 }
 
 /** BUTTONS

@@ -3,13 +3,13 @@
         <div class="menu-title">
             <a href="<?php echo SITE_ROOT; ?>">
                 <img src="<?php echo SITE_ROOT; ?>/public/img/logo.svg" alt="">
-                <span>FinApps</span>
+                <span>FinAppsParty</span>
             </a>
         </div>
 
         <div class="menu-profile">
             <div class="menu-profile-pic">
-                <img src="<?php echo SITE_ROOT; ?>/public/img/icon-guest.png" alt="..." class="img-circle profile_img">
+                <img src="<?php echo SITE_ROOT; ?>/public/img/Apolo.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="menu-profile-info">
                 <span>Hola,</span>
@@ -20,17 +20,9 @@
         <div class="menu-content">
             <div class="menu_section">
                 <ul class="menu-items">
-                    <li><a href="<?php echo SITE_ROOT; ?>"><i class="fa fa-desktop"></i> Home </a>
+                    <li><a href="<?php echo SITE_ROOT; ?>"><i class="fa fa-shield"></i> Sensores </a>
                     </li>
-                    <li><a><i class="fa fa-paper-plane-o"></i> Campañas <span class="glyphicon glyphicon-chevron-down"></span></a>
-                        <ul class="menu-child-items">
-                            <li><a href="<?php echo SITE_ROOT; ?>/campaigns/add">Crear campaña</a>
-                            </li>
-                            <li><a href="<?php echo SITE_ROOT; ?>/campaigns/view">Ver campañas</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo SITE_ROOT; ?>/newsletters/view"><i class="fa fa-envelope-o"></i> Newsletters</a></li>
+                    <li><a href="<?php echo SITE_ROOT; ?>/newsletters/view"><i class="fa fa-lightbulb-o"></i> Activadores</a></li>
                 </ul>
             </div>
         </div>

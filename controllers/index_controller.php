@@ -8,11 +8,11 @@ class Index_Controller extends Controller {
 	
 	public function index() {
 		$header = new View();
-		$header->Assign('username', 'FiberUser');
+		$header->Assign('username', 'xavism');
 		$this->Assign('header', $header->Render('header', false));
 
 		$menu = new View();
-		$menu->Assign('username', 'Sergi');
+		$menu->Assign('username', 'Xavi');
 		$this->Assign('menu', $menu->Render('menu', false));
 
 		$content = new View();

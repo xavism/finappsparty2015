@@ -5,7 +5,7 @@
 
     <div class="header-profile">
         <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="<?php echo SITE_ROOT; ?>/public/img/icon-guest.png" alt=""><?php echo $data['username']; ?>
+            <img src="<?php echo SITE_ROOT; ?>/public/img/Apolo.jpg" alt=""><?php echo $data['username']; ?>
             <span class=" fa fa-angle-down"></span>
         </a>
     </div>

@@ -3,46 +3,100 @@
 		<h1><?php echo $data['content-title']; ?></h1>
 	</div>-->
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-6">
-			<div class="content-panel">
+		<div id="cocina_up" class="col-xs-12 col-sm-12 col-md-6">
+			<div id="cocina" class="content-panel">
+                <script>
+                    /*$('#cocina_up').on('click', changeClass);
+                    function changeClass() {
+
+                        $('#cocina_up').toggleClass('col-md-6 col-md-12');
+                        $('#grafic_temp_cuina_cont').toggleClass('no-display display');
+                        $('#grafic_hum_cuina_cont').toggleClass('no-display display');
+                    }*/
+                </script>
 				<div class="content-panel-header">
-                    <i class="icon-food"></i> Cocina
+                    <i class="icon-food"></i> Cocina <span><i class="icon-ok text-right ok"></i></span>
 				</div>
 				<div class="content-panel-body">
-					<table class="table ">
-					<thead>
-				    	<tr>
-				    		<th><i class="wi wi-thermometer"></i> Temperatura</th>
-				    		<th><i class="fa fa-tint"></i> Humedad</th>
-				    	</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-                                <canvas id="cocina_temp" height="100" width="200">
+                    <div class="row">
+                        <div class="col-sm-12 col-sm-6 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <i class="wi wi-thermometer"></i> Temperatura
+                                </div>
+                                <div class="col-sm-12">
+                                    <canvas id="cocina_temp" height="100" width="200">
+                                </div>
+                                <div class="col-sm-12">
+                                    11ºC
+                                </div>
+                                <div class="col-sm-12 no-display" id="grafic_temp_cuina_cont">
+                                    <canvas id="grafic_temp_cuina" width="450" height="200"></canvas>
+                                </div>
 
-                            </td>
-							<td>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-sm-6 col-md-6">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <i class="fa fa-tint"></i> Humedad
+                                </div>
+                                <div class="col-sm-12">
+                                    <canvas id="cocina_hum" height="100" width="200">
+                                </div>
+                                <div class="col-sm-12">
+                                    90%
+                                </div>
+                                <div class="col-sm-12 no-display" id="grafic_hum_cuina_cont">
+                                    <canvas id="grafic_hum_cuina" width="450" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+			    </div>
+		    </div>
 
-                                <canvas id="cocina_hum" height="100" width="200">
-                            </td>
-
-						</tr>
-
-					</tbody>
-				</table>
-			</div>
-		</div>
-
-	</div>
+	    </div>
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="content-panel">
                 <div class="content-panel-header">
                     <i class="fa fa-bed"></i> Dormitorio
                 </div>
                 <div class="content-panel-body">
-
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <i class="wi wi-thermometer"></i> Temperatura</th>
+                        </div>
+                        <div class="col-sm-12">
+                            <canvas id="dormitorio_temp" height="100" width="170">
+                        </div>
+                        <div class="col-sm-12">
+                            24ºC
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="content-panel">
+                <div class="content-panel-header">
+                    <i class="fa fa-key"></i> Recibidor
+                </div>
+                <div class="content-panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <i class="fa fa-rss"></i> Movimiento</th>
+                        </div>
+                        <div class="col-sm-12">
+                            <img src="<?php echo SITE_ROOT; ?>/public/img/Preloader_10.gif" height="100px" alt="">
+                        </div>
+                        <div class="col-sm-12">
+                            Si
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
 
 </div>
