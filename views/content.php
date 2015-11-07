@@ -10,7 +10,7 @@
 		<div id="cocina_up" class="col-xs-12 col-sm-12 col-md-6">
 			<div id="cocina" class="content-panel">
 				<div class="content-panel-header">
-                    <i class="icon-food"></i> Cocina <span><i class="icon-ok text-right ok"></i></span>
+                    <i class="icon-food"></i> Cocina
 				</div>
 				<div class="content-panel-body">
                     <div class="row">

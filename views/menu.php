@@ -23,6 +23,7 @@
                     <li><a href="<?php echo SITE_ROOT; ?>"><i class="fa fa-shield"></i> Sensores </a>
                     </li>
                     <li><a href="<?php echo SITE_ROOT; ?>/actuadores"><i class="fa fa-lightbulb-o"></i> Actuadores</a></li>
+                    <li><a href="<?php echo SITE_ROOT; ?>/actuadores"><i class="fa fa-clock-o"></i> Alarmas</a></li>
                 </ul>
             </div>
         </div>
