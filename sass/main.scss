@@ -226,6 +226,9 @@ html,body,.left,.right,.wrapper{
 			th,td {
 				border-color: $cloud;
                 text-align: center;
+                canvas {
+                  height: 70px;
+                }
 			}
 			th {
 				font-weight: $bold;

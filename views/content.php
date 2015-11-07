@@ -12,17 +12,19 @@
 					<table class="table ">
 					<thead>
 				    	<tr>
-				    		<th>Temperatura</th>
-				    		<th>Humedad</th>
+				    		<th><i class="wi wi-thermometer"></i> Temperatura</th>
+				    		<th><i class="fa fa-tint"></i> Humedad</th>
 				    	</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>
-                                <canvas id="cocina_temp" width="128" height="128">
+                                <canvas id="cocina_temp" height="100" width="200">
+
                             </td>
 							<td>
-                                <canvas id="cocina_hum" width="128" height="128">
+
+                                <canvas id="cocina_hum" height="100" width="200">
                             </td>
 
 						</tr>
@@ -36,7 +38,7 @@
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="content-panel">
                 <div class="content-panel-header">
-                    <i class="icon-food"></i> Cocina
+                    <i class="fa fa-bed"></i> Dormitorio
                 </div>
                 <div class="content-panel-body">
 
